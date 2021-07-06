@@ -1,0 +1,86 @@
+# GIT e GITHUB
+
+OBS.: Este material é para consulta, e não esta completo.Qualquer comando que ache nesesario compartilhar e só adicionar aqui ... 
+
+* Repositorio - diretório onde os arquivos do seu projeto ficam armazenados
+* Branch - ramificação no projeto, linha cronologica alternativa
+* Commit - postar\salvar um nova verção/alterações
+* Merge - junção na Branch alternativa com a Branch principal, ou com outra ramificação
+* Remote - associa o seu repositorio local (Git) com o seu repositorio remoto (GitHub) 
+* Push - empurra o que tá do git para o github
+* Pull - puxa o que esta no github para o a sua maquina
+
+........................................................................................................................................................................
+# Como usar o Git e Github na prática
+
+- CRIANDO UM NOVO PROJETO
+
+* Crie uma nova pasta na sua maquina 
+* Abrir o VSCode nessa pasta
+* Criar um novo arquivo `README.md` e escrever dentro dele uma descrição qualque para identificar o repositorio
+* Salva o arquivo
+
+Agora então é hora de usarmos o Git:
+
+* Abre o Git Bash ou o terminal do VSCode ou o temminal do linux no diretorio certo
+* Digite `git init` para inicializar o repositório
+* Digite `git add README.md` para colocar o arquivo na área de stagging ou só `git add .`
+
+Esse `add` é necessário antes de darmos o commit de fato.
+
+* Digite `git commit -m "primeiro commit"` para de fato dar o commit no repositório
+
+* Digite `git branch -M "main"` para alterar o nome da branch principal de `master` para `main` (isso é uma boa prática atualmente recomendada)
+
+........................................................................................................................................................................
+
+- REPOSITÓRIO NO GITHUB
+
+* Depois de você ter criado a sua conta na plataforma, você irá em `Criar novo repositório`
+
+Você vai preencher com as informações do projeto, então dar o nome do repositório, colocar uma breve descrição e criar.
+Depois apenas copie o link que aparecer para você.
+
+Iremos utiliza o conceito de `remote` agora:
+
+* Para passar o commit do meu repositório local (da minha máquina) para um repositório na plataforma do Github, usamos o `git remote add origin <link do repositório>`
+
+* `origin` é o nome utilizado para referenciar o nosso repositório
+
+Agora já temos o nosso repositório local conectado com o respositório do Github, porém o `commit` que damos na máquina não sobe automaticamente para a plataforma
+
+* Para isso precisaremos empurrar, enviar para lá com o `git push -u origin main`
+
+Agora se recarregarmos a página iremos ver o nosso arquivo aqui na plataforma!
+
+........................................................................................................................................................................
+
+- ALTERANDO E ADICIONANDO ARQUIVOS
+Podemos alterar esse arquivo que já commitamos e criar um novo.
+
+* Agora então precisamos subir essa alteração, pra isso seguiremos os mesmos passos de `git add .` (agora ponto `.` pois adiciona todos os arquivos) e `git commit -m "Primeira alteração"`
+
+* Lembrando que para alterar algo no nosso respositório do Github precisamos dar o push, então `git push origin main` (sem o -u)
+
+Se olharmos agora o nosso código no Github, ele terá sido alterado, e não só isso, se clicarmos no nome do `commit`, podemos ver exatamente as alterações que foram feitas nele.
+O verde com `+` e o vermelho com `-` mostra, os conteúdos que foram adicionados e editados dentro do código.
+Aqui nesse botão poderemos ver todos os commits já feitos anteriormente, então se clicarmos em algum deles, veremos exatamente o que havia sido alterado, além de claro, vermos o código como era. Incrível né?
+
+........................................................................................................................................................................
+
+- CLONE
+Como vocês podem baixar meu código?
+
+Sempre que você entrar em um repositório, terá esse botão `Code`, que quando você clica aparece um link.Você irá copiar esse link e levar ele lá pro terminal
+
+* O comando para puxar o projeto para a sua máquina é o `git clone <https://github.com/linkqualquer.git>`
+
+Não é necessário criar um repositório antes disso, como fizemos anteriormente com o `git init`. Dessa vez, basta abrir o terminal e clonar o projeto e tudo aparecerá!
+
+- PULL
+E se for feita uma alteração no repositório clonado, como vocês podem atualizar na máquina de vocês?
+
+* Basta vocês executarem o comando `git pull`, ele irá puxar todas as alterações feitas no repositório do Github para o seu repositório local
+
+........................................................................................................................................................................
+
