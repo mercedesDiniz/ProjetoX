@@ -5,6 +5,7 @@ Recomendo que todos os integrantes da Equipe:
 2. Façam um Clone deste repositorio para a sua maquina, e o mantenha atualizado com o Pull sempre que ele for alterado por outro desenvolvedor da equipe
 
 Caso vc não esteja familiarizado com o GIT e o GITHUB, recomendo:
+
 https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA
 
 ou
