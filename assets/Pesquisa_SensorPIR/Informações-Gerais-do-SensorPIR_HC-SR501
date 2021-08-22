@@ -1,0 +1,27 @@
+# Informações Gerais sobre o MOdulo PIR HC-SR501
+
+O Sensor de presença PIR HC-SR501, também chamado de sensor de movimento, é um módulo que usa um sensor PIR (piroelétrico), capaz de detectar a variação de luz infravermelha emitida pela radiação do corpo humano. Dessa forma, ele é capaz de detecta movimento em um ambiente quando um corpo emissor de radiação se movimenta dentro da área de detecção de até 7 metros.
+
+No circuito impresso do sensor estão soldados 2 potenciómetros e um jumper que nos permitem modificar o seu comportamento e adaptá-lo às nossas necessidades ajustando o alcance de deteção, tempo de rearmado, comportamento, deteção repetitiva, etc ...
+
+
+ESPECIFICAÇÃO SENSOR DE PRESENÇA PIR HC-SR501
+
+    Alimentação: 5V – 20V DC
+    Corrente de Operação: <50mA
+    Saída TTL: 3,3V(Alto)
+    Tempo de retardo Ajustável: 2s – 200s
+    Distância detectável: 3-7m (Ajustável)
+    Tempo de Bloqueio: 2,5s (Padrão)
+    Trigger: (L)-Não Repetível (H)-Repetível (Padrão: H)
+    Ângulo do cone de detecção: < 100°
+    Temperatura de Trabalho: -15 ~ +70°C
+
+
+
+REFERENCIAS:
+    1. https://www.vidadesilicio.com.br/sensor-presenca-pir-hc-sr501
+    2. https://www.epitran.it/ebayDrive/datasheet/44.pdf
+    3. https://www.arduinoportugal.pt/uso-do-sensor-movimiento-hc-sr501-arduino/
+
+OBS.: por favor, adicione qualquer nova informação que achar necessario.
