@@ -1,0 +1,42 @@
+# Informações Gerais do Módulo SD Card
+
+O Módulo SD Card ou Módulo Cartão SD é uma placa que permite a leitura e a escrita em cartão de memória SD a paritr de um microcontrolador com interface SPI, suportando formatos de arquivo FAT16 e FAT32. Ele trabalha com tensões de 3,3/5VC e sua comunicação é feita via SPI.
+
+O Módulo SD Card pode ser utilizado em projetos em que há a necessidade de registrar ou ler dados de um cartão SD, tais como:
+
+    Registro de horário;
+    Leitura de comandos;
+    Datalogger;
+    Registros em geral (temperatura, humidade, resistência, etc.);
+
+ 
+Principais Características:
+
+    Tensão de Alimentação: 3,3VDC/5VDC;
+    Tensão Lógica: 3,3V;
+    Interface de comunicação SPI;
+    Formato de Arquivos: FAT16 ou FAT32;
+
+Pinout e Especificações:
+
+O Pinout do Módulo SD Card está especificado em seus próprios pinos, e a função de cada um está descrita abaixo:
+
+    GND – deve ser conectado ao GND do Arduino.
+    5 V/3.3 V – pino que fornece energia para o módulo e deve ser conectado ao 5 V/3.3 V no Arduino.
+    SDCS – pino que é usado pelo Arduino (Master) para habilitar e desabilitar dispositivos específicos no barramento SPI.
+    MOSI (Master OUT Slave IN) – é a entrada SPI do Módulo SD Card.
+    SCK (Serial Clock) – pino que aceita pulsos de clock que sincronizam a transmissão de dados gerados pelo Arduino.
+    MISO (Master IN Slave OUT) – é a saída SPI do Módulo SD Card.
+
+
+REFERENCIAS:
+1. https://blog.eletrogate.com/tutorial-definitivo-modulo-sd-card/
+2. https://www.usinainfo.com.br/blog/projeto-arduino-sd-card-leitura-e-escrita-de-dados-no-cartao-micro-sd/
+3. https://www.filipeflop.com/blog/cartao-sd-com-arduino/
+4. https://www.youtube.com/watch?v=Tw2DBJxFeTo
+
+
+OBS.: por favor, adicione qualquer nova informação que achar necessario.
+
+
+
