@@ -1,4 +1,4 @@
-/* Teste 01 - Sistema Auxiliar de Detecção Infravermelho (Led Emissor IR e Fototransistor IR)  (NÃO TESTADO)
+/* Teste 01 - Sistema Auxiliar de Detecção Infravermelho (usando Led Emissor IR e Fototransistor IR)  (NÃO TESTADO)
 
 - Proposta: Utilizar o Led Emissor IR e Fototransistor IR em conjunto com o Arduino e enviar o sinal IR do emissor para o receptor, e sempre que o sinal for interrompido significa que algum obstaculo/pessoa passou pelo perimetro. Com um comjunto formado por dois pares desse sistema podemos determida o sentido da locomoção (se a pessoa esta entrando ou saindo) se instalado em uma abertura (como porta ou janela). 
 
