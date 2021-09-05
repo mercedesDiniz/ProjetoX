@@ -23,7 +23,7 @@ int cont_F01, cont_F02 = 0; // Variaveis de controle para auxiliar na determina�
 // ANALIZANDO O PRIMEIRO PAR(LedIR01 e F01 que devem está mais para a parte de FORA, logo se ele for acionado primeiro é pq a pesoa está ENTRANDO.)
 // ANALIZANDO O SEGUNDO PAR(LedIR02 e F02 que devem está mais para a parte de DENTRO, logo se ele for acionado primeiro é pq a pesoa está SAINDO.)	
     
-    if(cont_F01 == 0 && cont_F02 = 0){	
+    if(cont_F01 == 0 && cont_F02 == 0){	
 	    if(analogRead(pinoFotot01) > 800){   // Sinal infravermelho do F01 interrompido! (valor varia de acordo com a distancia do Led01 e F01,e pode ter que ser calibrado).
 	    	Serial.println("Sinal infravermelho interrompido no F01");
 	    	cont_F01 = 1; // o F1 foi o Primeiro à disparar
@@ -36,7 +36,7 @@ int cont_F01, cont_F02 = 0; // Variaveis de controle para auxiliar na determina�
     
 // OBS.: Não tenho certeza se o bloco de instruções de baixo não vai sobreescrever o de cima! A logica pode ter que ser modificada.
 
-    if(cont_F01 == 0 && cont_F02 = 0){
+    if(cont_F01 == 0 && cont_F02 == 0){
 	    if(analogRead(pinoFotot02) > 800){   // Sinal infravermelho do F02 interrompido! (valor varia de acordo com a distancia do Led01 e F01,e pode ter que ser calibrado).
 	    	Serial.println("Sinal infravermelho interrompido no F02");
 	    	cont_F02 = 1; //  o F2 foi o Primeiro à disparar
@@ -48,10 +48,10 @@ int cont_F01, cont_F02 = 0; // Variaveis de controle para auxiliar na determina�
     }
     
 // Analizando a ordem para determinar se o movimento foi de ENTRADA ou SAIDA:
-   if (cont_F01 == 1 && cont_F02 = 2){
+   if (cont_F01 == 1 && cont_F02 == 2){
   	Serial.println("ALGUEM ENTROU"); // ALGUEM ENTROU!
    } 
-   if (cont_F01 == 2 && cont_F02 = 1){
+   if (cont_F01 == 2 && cont_F02 == 1){
   	Serial.println("ALGUEM SAIU"); // ALGUEM SAIU!
    } 
    Serial.print("NÚMERO DE PESSOAS VERIFICADO = ");
@@ -62,6 +62,6 @@ int cont_F01, cont_F02 = 0; // Variaveis de controle para auxiliar na determina�
   
  }
         
-  }
+  
   
 
