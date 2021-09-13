@@ -16,11 +16,10 @@
   String mensagemSMS;
   String comandoGSM = "";
   String ultimoGSM = "";
-  String mensagemAviso = "Algo foi detectado!Envei um SMS de resposta!Deseja: 1)Ignorar ou 2)Ligar para Policia ?";
+  String mensagemAviso = "Algo foi detectado!Envei um SMS de resposta!Deseja: 1)Ignorar ou 2)Escutar ?";
   
   //#define senhaGsm "1234"
   #define numeroUsuario "982094131" 
-  #define numeroPolicia "981388098" // tem q mudar isso antes de testar
   int pinoPIR = 13; // Pino do sensor PIR
   
   bool callStatus = false;
@@ -50,12 +49,7 @@
     }
     
     if(digitalRead(pinoPIR) == HIGH){ // SE A LEITURA DO pinoPIR FOR IGUAL A HIGH -> ALGO FOI DETECTADO! 
-      /* bloco de instruções: 
-      1. um SMS (com uma foto se possivel)deve ser enviado para o usuario avisando;
-      2. o GSM deve esperar a resposta do usuario para mais instruçoes, como:
-           1)ignorar. 2)ligar para a policia (que aqui sera outro numero) 
-           *obs.: 1.temos q descobrir como fazer chamada com audio gravado, talvez a funçao "fzLigacao" tenha que ser alterada;
-                  2.o que fazer caso a ligaça para a policia falhar? temos que tratar isso.*/
+      // bloco de instruções: 
       
       enviaSMS(numeroUsuario, mensagemAviso);
       
@@ -65,9 +59,9 @@
           enviaSMS(numeroUsuario, "OK. Descartando Avisso...Ignorado com Sucesso!");
         }
         
-        if(mensagemSMS == "2" || mensagemSMS == "Policia" && !callStatus){
-          enviaSMS(numeroUsuario, "OK. Chamando a Policia...");
-          fazLigacao(numeroPolicia);
+        if(mensagemSMS == "2" || mensagemSMS == "Escutar" && !callStatus){
+          enviaSMS(numeroUsuario, "OK. Estou ligando para vc...");
+          fazLigacao(numeroUsuario);
           callStatus = true;
           
           // 
@@ -105,13 +99,6 @@
       }
   
    }
-   
-   // com a LEITURA DO pinoPIR IGUAL A LOW -> NADA DETECTADO! 
-      /* bloco de instruções:
-      1.Tratar outros comandos que o usuario pode mandar por SMS (usando a variavel "ultimoGSM"), como:
-          a)mandar localizaço(em aberto) b)outros */
-      
-   
     
   }
   
