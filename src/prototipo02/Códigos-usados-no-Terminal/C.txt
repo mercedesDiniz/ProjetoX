@@ -1,0 +1,5 @@
+opencv_createsamples.exe -img BASE.jpg -bg bg.txt -info info/info.lst -maxxangle 0.5 -maxyangle 0.5 -maxzangle 0.5 -num 8374                       
+
+opencv_createsamples.exe -info info/info.lst -num 8374 -w 20 -h 20 -vec positives.vec
+
+opencv_traincascade.exe -data data -vec positives.vec -bg bg.txt -numPos 8374 -numNeg 4187 -numStages 10 -w 20 -h 20
