@@ -1,19 +1,8 @@
-/* TESTE GSM MMS
--Referencias:
-	1. https://stackoverflow.com/questions/67413578/sim800-how-to-send-mms-with-c
-	2. https://manuals.plus/usb-to-gsm-module/usb-to-gsm-module-lc-gsm-sim800c-2-manual#calling
-	3. https://www.usinainfo.com.br/blog/projeto-arduino-sd-card-leitura-e-escrita-de-dados-no-cartao-micro-sd/
-*/
-
 #include <SPI.h>
 #include <SD.h>
 #include <SoftwareSerial.h>
 
   SoftwareSerial serialGSM(10, 11); // RX, TX
-  /*
-  bool temMMS = false;
-  String comandoGSM = "";
-  String ultimoGSM = ""; */
   String mensagemSMS;
   String SerialGSM = "";
   
@@ -46,20 +35,7 @@ void setup() {
   configGSMmms();
 }
 
-void loop(){
-  
-   /* leGSM();
-  
-    if (comandoGSM != "") {
-        Serial.println(comandoGSM);
-        ultimoGSM = comandoGSM;
-        comandoGSM = "";
-    }
-    //enviaMMS(numeroUsuario);  // Funçao para enviar MMS(dando erro)
-    if(temMMS){
-      }
-      */
-    
+void loop(){}
 //configurando o GSM para enviar imagem com texto em MMS
 void configGSMmms(){
   //incialização
@@ -163,15 +139,14 @@ void configGSMmms(){
   {
     while (serialGSM.available ()) Serial.write (serialGSM.read());
   }
-    serialGSM.print("AT + CMMSEDIT = 0 \n");//
+    serialGSM.print("AT + CMMSEDIT = 0 \n");//Entrar ou sair do modo de edição
     if (serialGSM.available ())
   {
     while (serialGSM.available ()) Serial.write (serialGSM.read ());
   }
-    serialGSM.print("AT + CMMSTERM \n");
+    serialGSM.print("AT + CMMSTERM \n");//Sair da função MMS
      if (serialGSM.available())
   {
     while (serialGSM.available()) Serial.write (serialGSM.read ());
   }
-}
 }

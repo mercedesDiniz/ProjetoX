@@ -1,0 +1,5 @@
+Para fazer o programa funcionar é necessário usa a linguagem de programação python com as bibliotecas do openCV devidamente instaladas(nós usamos o pycharm ) ,  
+o código principal em python "Codigo4_Video" e todos os arquivos .xml da pasta haar cascade. No nosso caso colocamos tudo isso dentro da pasta raiz do pycharm  
+e executamos o código principal com uma webcam conectada ao computador. Todos os outros arquivos restantes somados com o dataset e os arquivos createsamples  
+e traincascade do openCV( os últimos três não estão na pasta devido aos seus pesos serem muito grandes) foram usados na criação do nosso próprio haar cascade 
+e serão explicados no futuro relatório final de forma mais clara. 
